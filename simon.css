@@ -1,0 +1,32 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/gaming.jpg");
+    background-repeat: no-repeat;
+    margin: 0;
+    background-size: cover;
+    backdrop-filter: alpha(60);
+    background-position: center;
+}
+
+header {
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 1em;
+}
+.welcome {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.welcome h1 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: teal;
+}
+.welcome span {
+    letter-spacing: .5em;
+    font-size: x-large;
+    font-style: italic;
+}
