@@ -15,7 +15,7 @@ header {
 }
 .gameboard {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,5 +41,14 @@ header {
     font-style: italic;
 }
 .button {
-    padding: 3em, 8em, 3em, 8em;
+    border: .1em solid black;
+    border-radius: 1em;
+    font-family: monospace;
+    padding: .5em 2em;
+    font-size: 4em;
+    display: none;
 }
+.color {
+    
+}
+
