@@ -46,9 +46,46 @@ header {
     font-family: monospace;
     padding: .5em 2em;
     font-size: 4em;
+    position: absolute;
+    z-index: 2;
+}
+.colorsTable {
+    width: 70vh;
+    height: 60vh;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow: hidden;
     display: none;
 }
 .color {
+    width: calc(100% / 2);
+    height: calc(100% /2);
+    display: inline-block;
     
 }
+/* calc(100% / 6) */
+.rojo {
+    background: red;
+}
 
+.morado {
+    background: purple;
+}
+.azul-marino {
+    background: darkblue;
+}
+.verde {
+    background: darkgreen;
+}
+.violeta {
+    background: rgb(77, 3, 48);
+}
+.celeste {
+    background: lightblue;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
