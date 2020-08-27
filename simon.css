@@ -95,3 +95,27 @@ header {
     /* transition-timing-function: ease;
     transition-duration: 1s; */
 }
+.red-light {
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);    
+    background: rgb(255, 110, 110);
+}
+.purple-light {
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    box-shadow: 0px 0px 15px 8px rgba(0,26,255,1); 
+    background: rgb(198, 136, 248);   
+}
+.green-light {
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);   
+    background: rgb(125, 241, 125);
+}
+.violet-light {
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
+    background: violet;
+}
