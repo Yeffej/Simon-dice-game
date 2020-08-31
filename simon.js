@@ -9,14 +9,35 @@ const colorsTableValue = colorsTableStyle.getPropertyValue("display")
 
 class game {
     constructor() {
-        // this.initial()
-        this.gameboard()
+        this.gameboardStart()
     }
-    gameboard () {
+    gameboardStart () {
         button.classList.add("hide")
         if (colorsTableValue === "none"){
             colorsTable.style.setProperty("display", "initial")
         }
+        showAndClick()
+    }
+    showAndClick() {
+        randomShow()
+    }
+    randomShow() {
+        let colorchose
+       const randomNumber = Math.floor(Math.random()* 4)
+       switch (randomNumber) {
+           case 0:
+                colorchose = red
+                break;
+            case 1: 
+                colorchose = green
+                break;
+            case 2: 
+                colorchose = purple
+                break;
+            case 3: 
+                colorchose = violet
+       }
+       return colorchose
     }
 }
 
