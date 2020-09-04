@@ -6,6 +6,11 @@ const purple = document.getElementById("purple")
 const colorsTable = document.getElementById("colorsTable")
 const colorsTableStyle = window.getComputedStyle(colorsTable)
 const colorsTableValue = colorsTableStyle.getPropertyValue("display") 
+const audio = document.getElementById("audio1")
+const audio2 = document.getElementById("audio2")
+const audio3 = document.getElementById("audio3")
+const audio4 = document.getElementById("audio4")
+
 
 class game {
     constructor() {
@@ -26,6 +31,7 @@ class game {
                 violet,
                 purple,
             }
+            this.audios = {audio, audio2, audio3, audio4,}
         }
         nextLevel () {
             this.shine()
@@ -48,18 +54,33 @@ class game {
             this.showAcolor = new Array(12).fill(0).map(n => n = Math.floor(Math.random()*4))
 
         }
+        transformAaudio(color) {
+            switch(color) {
+                case "red": 
+                    return "audio"
+                case "green":
+                    return "audio2"
+                case "purple":
+                    return "audio3"
+                case "violet":
+                    return "audio4"
+            }
+        }
         shine() {
             for (let i = 0; i < this.level; i++) {
                 const colorChose = this.transformAColor(this.showAcolor[i])
-                setTimeout(() => this.turnOn(colorChose), 2000*i) 
+                const audioChose = this.transformAaudio(colorChose)
+                console.log(audioChose)
+                setTimeout(() => this.turnOn(colorChose, audioChose), 3250*i) 
             }      
         }
-        turnOn(color) {
+        turnOn(color, audiox) {
+            this.audios[audiox].play()
             this.colors[color].classList.add("light")
-            setTimeout(() => this.tunroff(color), 1000);
-             
+            setTimeout(() => this.tunroff(color, audiox), 2750);
         }
-        tunroff(color) {
+        tunroff(color, audiox) {
+            this.audios[audiox].pause()
             this.colors[color].classList.remove("light")
         }
     }
