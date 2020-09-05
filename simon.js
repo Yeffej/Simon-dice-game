@@ -71,16 +71,15 @@ class game {
                 const colorChose = this.transformAColor(this.showAcolor[i])
                 const audioChose = this.transformAaudio(colorChose)
                 console.log(audioChose)
-                setTimeout(() => this.turnOn(colorChose, audioChose), 3250*i) 
+                setTimeout(() => this.turnOn(colorChose, audioChose), 3000*i) 
             }      
         }
         turnOn(color, audiox) {
             this.audios[audiox].play()
             this.colors[color].classList.add("light")
-            setTimeout(() => this.tunroff(color, audiox), 2750);
+            setTimeout(() => this.tunroff(color), 2000);
         }
-        tunroff(color, audiox) {
-            this.audios[audiox].pause()
+        tunroff(color) {
             this.colors[color].classList.remove("light")
         }
     }
