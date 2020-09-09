@@ -152,3 +152,15 @@ header {
     height: 60%;
     z-index: 2;
 }
+.red.click {
+    background: rgb(255, 110, 110);
+}
+.purple.click {
+    background: rgb(198, 136, 248);
+}
+.green.click {
+    background: rgb(125, 241, 125);
+}
+.violet.red.click {
+    background: violet;
+}
