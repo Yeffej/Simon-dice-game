@@ -11,13 +11,13 @@ const audio = document.getElementById("audio1")
 const audio2 = document.getElementById("audio2")
 const audio3 = document.getElementById("audio3")
 const audio4 = document.getElementById("audio4")
-const max_level = 3 
+const max_level = 12 
 
 class game {
     constructor() {
         this.gameboardStart()
         this.randomShow()
-        setTimeout(()=> this.nextLevel(), 500 )   
+        setTimeout(()=> this.nextLevel(), 500)   
     }
         gameboardStart () {
             this.checkOutEvent = this.checkOutEvent.bind(this)
