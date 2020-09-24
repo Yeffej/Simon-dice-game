@@ -77,20 +77,28 @@ class game {
             }
         }
         shine() {
-            for (let i = 0; i < this.level; i++) {
+            let i
+            let counter = 0
+            for (i = 0; i < this.level; i++) {
                 const colorChose = this.transformAColor(this.randomNumbers[i])
                 const audioChose = this.transformAaudio(colorChose)
-                // console.log(audioChose)
-                setTimeout(() => this.turnOn(colorChose, audioChose), 2800*i) 
-            }      
+                counter ++
+                this.shineTimeout = setTimeout(() => this.turnOn(colorChose, audioChose, i, counter), 1800*i)
+                } 
         }
-        turnOn(color, audiox) {
+        turnOn(color, audiox, i, count) {
+            this.removinglisteners()
             this.audios[audiox].play()
             this.colors[color].classList.add("light")
-            setTimeout(() => this.tunroff(color), 2000);
+            setTimeout(() => this.tunroff(color, audiox, i, count), 1000);
         }
-        tunroff(color) {
+        tunroff(color, audiox, i, count) {
+            this.audios[audiox].load()
             this.colors[color].classList.remove("light")
+            const orginNumber = this.randomNumbers.indexOf(this.transformANumber(color), count - 1)
+            if (orginNumber === i-1) {
+                this.addinglisteners()
+            }   
         }
         levelup() {
             // this.level ++
@@ -109,9 +117,10 @@ class game {
             this.colors[clickedColor].classList.add("click")
             const audioClicked = this.transformAaudio(clickedColor)
             this.audios[audioClicked].play()
-            setTimeout(() => this.turnClickOff(clickedColor), 800)
+            setTimeout(() => this.turnClickOff(clickedColor, audioClicked), 800)
         }
-        turnClickOff(click) {
+        turnClickOff(click, audioClicked) {
+            this.audios[audioClicked].load()
             this.colors[click].classList.remove("click")
         }
         transformANumber(color) {
@@ -166,6 +175,10 @@ class game {
       
     }
 
+
+function newFunction() {
+    debugger
+}
 
 function StartThegame() {
     let Game
