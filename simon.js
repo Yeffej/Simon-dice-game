@@ -17,7 +17,7 @@ class game {
     constructor() {
         this.gameboardStart()
         this.randomShow()
-        setTimeout(()=> this.nextLevel(), 500)   
+        setTimeout(()=> this.nextLevel(), 1000)   
     }
         gameboardStart () {
             this.checkOutEvent = this.checkOutEvent.bind(this)
@@ -34,11 +34,16 @@ class game {
             this.audios = {audio, audio2, audio3, audio4,} 
         }
         hideTheGameboard() {
-            const style = colorsTable.style.display
-            if(style === "initial") {
-                colorsTable.style.setProperty("display", "none")
-            }else {
-                colorsTable.style.setProperty("display", "initial")
+            // const style = colorsTable.style.display
+            // if(style === "initial") {
+            //     colorsTable.style.setProperty("display", "none")
+            // }else {
+            //     colorsTable.style.setProperty("display", "initial")
+            // }
+            if (colorsTable.classList.contains("hide")) {
+                colorsTable.classList.remove("hide")
+            } else {
+                colorsTable.classList.add("hide")
             }
         }
         nextLevel () {

@@ -48,15 +48,26 @@ header {
     font-size: 4em;
     position: absolute;
     z-index: 2;
-    
+    -moz-transition: .8s;
+    -webkit-transition: .8s;
+    transition: .8s;
+    will-change: transform;
 }
 #colorsTable {
     width: 70vh;
     height: 60vh;
     border-radius: 50%;
     overflow: hidden;
-    display: none;
+    /* display: none; */
     position: relative;
+    opacity: 0;
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -moz-transition: .8s;
+    -webkit-transition: .8s;
+    transition: .8s;
+    will-change: transfom , opacity;
 }
 .color {
     width: calc(100% / 2);
@@ -99,10 +110,10 @@ header {
 .right {
     float: right;
 }
-.hide {
-    display: none;
-    /* transition-timing-function: ease;
-    transition-duration: 1s; */
+.button.hide {
+    -webkit-transform: scale(0) rotate(360deg);
+    -moz-transform: scale(0) rotate(360deg);
+    transform: scale(0) rotate(360deg);
 }
 .red.light {
     -webkit-box-shadow: 0px 0px 15px 8px rgba(0,26,255,1);
@@ -163,4 +174,9 @@ header {
 }
 .violet.click {
     background: violet;
+}
+
+#colorsTable.hide {
+ transform: scale(1);
+ opacity: 1;   
 }
