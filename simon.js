@@ -154,7 +154,7 @@ class game {
             }else {
                 this.removinglisteners()
                 // if (swal) {
-                    swal("ups, Perdiste el juego", "Intentalo de nuevo", "error")
+                    swal("ups, Has Perdido", "Intentalo de nuevo", "error")
                     .then(this.gameboardStart())
                     .catch(() => alert("Lo sentimos ha habido un error del sistema"))
                 // } else {
