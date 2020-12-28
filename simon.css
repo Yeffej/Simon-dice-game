@@ -194,6 +194,17 @@ header {
     }
 }
 @media screen and (max-width: 480px) {
+    .welcome {
+        display: initial;
+        text-align: center;
+    }
+    .welcome h1 {
+        padding-top: 20px;
+        margin-top: 0;
+    }
+    .welcome span {
+        display: block;
+    }
     .button {
         font-size: 2em;
     }
@@ -201,9 +212,9 @@ header {
 }
 @media screen and (max-width: 320px) {
     .welcome h1 {
-        font-size: 1em;
+        font-size: 1.3em;
     }
     .welcome span {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 }
